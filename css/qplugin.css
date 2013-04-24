@@ -1,0 +1,46 @@
+.shade_class{
+	display:none;
+	position: fixed;
+	top:0;
+	right:0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	background-color: black;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+}
+.qmessager {
+	width:200px;
+	height:100px;
+	border: 1px solid #fbeed5;
+	background-color:#fcf8e3;
+	text-shadow: 0 1px 0 rgb(223, 212, 192);
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius: 5px;
+	z-index:9999;
+	padding:5px 10px;
+	position: absolute;
+	-webkit-box-shadow: 4px 4px 3px rgb(223, 212, 192);
+	-moz-box-shadow: 4px 4px 3px rgb(223, 212, 192);
+	box-shadow: 4px 4px 3px rgb(223, 212, 192);
+	display: none;
+}
+
+.qmessager-error {
+	border-color:#eed3d7;
+	background:#f2dede;
+	color:#b94a48;
+}
+.qmessager-success{
+	color: #468847;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+}
+
+.qmessager-info{
+	color: #3a87ad;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+}
