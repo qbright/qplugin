@@ -8,6 +8,7 @@ var DATEPICKER_CONFIG = {
     "showOnStart": false
 }
 
+<<<<<<< HEAD
 function DatePicker(target) {
     this.target = target;
     this.datePicker;
@@ -15,6 +16,15 @@ function DatePicker(target) {
     this.dayContent;
     this.init();
 }
+=======
+    function DatePicker(target) {
+        this.target = target;
+        this.datePicker;
+        this.dayContainer;
+        this.dayContent;
+        this.init();
+    }
+>>>>>>> c9b513ef17baed3306686f937f64ec7d5a9e35d8
 
 DatePicker.prototype.init = function(date) {
     var today = this.resetTime(new Date()),
@@ -114,9 +124,12 @@ DatePicker.prototype.generalDay = function(date, currentDate, today) {
 DatePicker.prototype.bindEvent = function() {
     this.bindDayContainerEvent();
     this.bindDayContentEvent();
+<<<<<<< HEAD
     document.addEventListener("click",function(event){
        this.hideDatePicker();
     }.bind(this),true);
+=======
+>>>>>>> c9b513ef17baed3306686f937f64ec7d5a9e35d8
 
 }
 DatePicker.prototype.bindDayContainerEvent = function() {
@@ -125,6 +138,7 @@ DatePicker.prototype.bindDayContainerEvent = function() {
         node.addEventListener("click", function(event) {
             var target = event.target;
             this.target.value = target.getAttribute("data-date");
+<<<<<<< HEAD
             this.hideDatePicker();
         }.bind(this), false);
     }
@@ -137,12 +151,19 @@ DatePicker.prototype.hideDatePicker = function(){
     this.datePicker.classList.remove("cal_container_fadeIn");
     this.datePicker.classList.add("cal_container_fadeOut");
 }
+=======
+            this.toggleDatePicker();
+        }.bind(this), false);
+    }
+}
+>>>>>>> c9b513ef17baed3306686f937f64ec7d5a9e35d8
 DatePicker.prototype.bindDayContentEvent = function() {
     var arraySet = document.querySelectorAll(".date_array");
     for (var i = 0, node; node = arraySet[i]; ++i) {
         if (node.classList.contains("prevYear")) {
 
             node.addEventListener("click", function() {
+<<<<<<< HEAD
                 this.showDatePicker();
                 this.rebuild(this.getDayContent(), "prevYear");
 
@@ -150,16 +171,28 @@ DatePicker.prototype.bindDayContentEvent = function() {
         } else if (node.classList.contains("prevMonth")) {
             node.addEventListener("click", function() {
                 this.showDatePicker();
+=======
+                this.rebuild(this.getDayContent(), "prevYear");
+            }.bind(this), false);
+        } else if (node.classList.contains("prevMonth")) {
+            node.addEventListener("click", function() {
+>>>>>>> c9b513ef17baed3306686f937f64ec7d5a9e35d8
                 this.rebuild(this.getDayContent(), "prevMonth");
             }.bind(this), false);
         } else if (node.classList.contains("nextYear")) {
             node.addEventListener("click", function() {
+<<<<<<< HEAD
                 this.showDatePicker();
+=======
+>>>>>>> c9b513ef17baed3306686f937f64ec7d5a9e35d8
                 this.rebuild(this.getDayContent(), "nextYear");
             }.bind(this), false);
         } else if (node.classList.contains("nextMonth")) {
             node.addEventListener("click", function() {
+<<<<<<< HEAD
                 this.showDatePicker();
+=======
+>>>>>>> c9b513ef17baed3306686f937f64ec7d5a9e35d8
                 this.rebuild(this.getDayContent(), "nextMonth");
             }.bind(this), false);
         }
@@ -211,5 +244,9 @@ DatePicker.prototype.resetTime = function(date) {
     return date;
 }
 window.addEventListener("load", function() {
+<<<<<<< HEAD
   //  var datePicker = new DatePicker(document.getElementById("datePicker"));
+=======
+    var datePicker = new DatePicker(document.getElementById("datePicker"));
+>>>>>>> c9b513ef17baed3306686f937f64ec7d5a9e35d8
 })
